@@ -16,7 +16,7 @@ if(logged_in()){
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Log in</title>
+    <title>Register</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -98,31 +98,71 @@ if(logged_in()){
     <!--        FarewellDab-->
     <!--    </div>-->
         <?php
-        if ( $_POST[ 'submitL' ] == "1") {
-            login( $_POST[ 'user' ], $_POST[ 'pass' ]);
+        if ( $_POST[ 'submitR' ] == "1") {
+            registerUser($_POST);
         }
         ?>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in</p>
+            <p class="login-box-msg">Register</p>
             <p>
                 <?php echo messages();?>
             </p>
             <form action="" method="POST">
                 <div class="form-group has-feedback">
                     <input type="text" name="user" class="form-control" placeholder="Username" required>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
                     <input type="password" name="pass" class="form-control" placeholder="Password" required>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+                    <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+                    <span class="glyphicon glyphicon-pencil form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <select name="sex" id="" class="form-control">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="enroll" class="form-control" placeholder="Enrollment no." required>
+                    <span class="glyphicon glyphicon-menu-hamburger form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <select name="branch" id="" class="form-control">
+                        <option value="CSE">CSE</option>
+                        <option value="IT">IT</option>
+                        <option value="EE">EE</option>
+                        <option value="EC">EC</option>
+                        <option value="EX">EX</option>
+                        <option value="CE">CE</option>
+                        <option value="ME">ME</option>
+                    </select>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="session" class="form-control" placeholder="Session (Ex. 17-21)" required>
+                    <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <select name="passout" id="" class="form-control">
+                        <option value="0">Not yet passed out.</option>
+                        <option value="1">Passed out.</option>
+                    </select>
+                </div>
                 <div class="row">
-                    <div class="col-xs-4 pull-left">
-                        <button type="submit" class="btn btn-warning btn-block btn-flat" name="submitR" onclick="location.href='register.html'" value="1">Register!</button>
-                    </div>
-                    <div class="col-xs-4 pull-right">
-                        <button type="submit" class="btn btn-danger btn-block btn-flat" name="submitL" value="1">Sign In</button>
+                    <div class="col-xs-5 pull-right">
+                        <button type="submit" class="btn btn-danger btn-block btn-flat" name="submitR" value="1">Get on board!</button>
                     </div>
                     <!-- /.col -->
                 </div>

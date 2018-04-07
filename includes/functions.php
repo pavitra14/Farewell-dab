@@ -54,3 +54,8 @@ require_once 'controllers/login.php';
  * generate gravatar image urls
  */
 require_once 'controllers/gravatar.php';
+
+/**
+ * handle user registrations
+ */
+require_once 'controllers/register.php';
