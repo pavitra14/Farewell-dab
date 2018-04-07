@@ -14,12 +14,12 @@ function registerUser($post) {
     $fname = $post['fname'];
     $lname = $post['lname'];
     $email = $post['email'];
-    $sex = $post['sex'];
-    $enroll = $post['enroll'];
-    $branch = $post['branch'];
     $session = $post['session'];
-    $passout = $post['passout'];
-    $query = "INSERT INTO `user_details`(`u_id`, `username`, `password`, `fname`, `lname`, `email`, `sex`, `enroll`, `branch`, `session`, `passout`) VALUES ('$u_id','$username','$password','$fname','$lname','$email','$sex','$enroll','$branch','$session','$passout')";
+    $alumini = 0;
+    if(isset($post['alumini'])) {
+        $alumini = $post['alumini'];
+    }
+    $query = "INSERT INTO `user_details`(`u_id`, `username`, `password`, `fname`, `lname`, `email`, `session`, `alumini`) VALUES ('$u_id','$username','$password','$fname','$lname','$email', '$session', '$alumini')";
     if(mysqli_query($conn, $query)) {
         //Registration Successfull
         echo '<script>alert("Registration Successful, You may now login.")</script>';

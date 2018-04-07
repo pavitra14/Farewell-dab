@@ -130,36 +130,14 @@ if(logged_in()){
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <select name="sex" id="" class="form-control">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                    </select>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="text" name="enroll" class="form-control" placeholder="Enrollment no." required>
-                    <span class="glyphicon glyphicon-menu-hamburger form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <select name="branch" id="" class="form-control">
-                        <option value="CSE">CSE</option>
-                        <option value="IT">IT</option>
-                        <option value="EE">EE</option>
-                        <option value="EC">EC</option>
-                        <option value="EX">EX</option>
-                        <option value="CE">CE</option>
-                        <option value="ME">ME</option>
-                    </select>
-                </div>
-                <div class="form-group has-feedback">
                     <input type="text" name="session" class="form-control" placeholder="Session (Ex. 17-21)" required>
                     <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <select name="passout" id="" class="form-control">
-                        <option value="0">Not yet passed out.</option>
-                        <option value="1">Passed out.</option>
-                    </select>
+                    <label for="alumini">Alumini</label>
+                    <input type="checkbox" id="alumini" name="alumini" value="1" class="icheckbox_flat-blue">
                 </div>
+
                 <div class="row">
                     <div class="col-xs-5 pull-right">
                         <button type="submit" class="btn btn-danger btn-block btn-flat" name="submitR" value="1">Get on board!</button>
@@ -183,6 +161,15 @@ if(logged_in()){
 <script src="<?php echo LTE;?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="<?php echo LTE;?>plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(function() {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
 
 </body>
 </html>
