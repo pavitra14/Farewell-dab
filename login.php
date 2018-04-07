@@ -80,49 +80,60 @@ if(logged_in()){
             color: #900;
         }
         /* END OF MESSAGES */
+        .site-wrapper {
+            display: table;
+            width: 100%;
+            height: 100%;
+            /* For at least Firefox */
+            min-height: 100%;
+            background: rgba(48, 53, 70, 0.5);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body class="hold-transition login-page">
-<div class="login-box">
-<!--    <div class="login-logo">-->
-<!--        FarewellDab-->
-<!--    </div>-->
-    <?php
-    if ( $_POST[ 'submit' ] == "1") {
-        login( $_POST[ 'user' ], $_POST[ 'pass' ]);
-    }
-    ?>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Sign in</p>
-        <p>
-            <?php echo messages();?>
-        </p>
-        <form action="" method="POST">
-            <div class="form-group has-feedback">
-                <input type="text" name="user" class="form-control" placeholder="Username">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" name="pass" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="row">
-                <div class="col-xs-8 pull-left"><a href="#" onclick="alert('Feature will be available soon!');">I forgot my password</a></div>
-                <div class="col-xs-4 pull-right">
-                    <button type="submit" class="btn btn-info btn-block btn-flat" name="submit" value="1">Sign In</button>
+<div class="site-wrapper">
+    <div class="login-box">
+    <!--    <div class="login-logo">-->
+    <!--        FarewellDab-->
+    <!--    </div>-->
+        <?php
+        if ( $_POST[ 'submit' ] == "1") {
+            login( $_POST[ 'user' ], $_POST[ 'pass' ]);
+        }
+        ?>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in</p>
+            <p>
+                <?php echo messages();?>
+            </p>
+            <form action="" method="POST">
+                <div class="form-group has-feedback">
+                    <input type="text" name="user" class="form-control" placeholder="Username">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
-                <!-- /.col -->
-            </div>
-        </form>
+                <div class="form-group has-feedback">
+                    <input type="password" name="pass" class="form-control" placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8 pull-left"><a href="#" onclick="alert('Feature will be available soon!');">I forgot my password</a></div>
+                    <div class="col-xs-4 pull-right">
+                        <button type="submit" class="btn btn-info btn-block btn-flat" name="submit" value="1">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
 
 
-        <br>
+            <br>
 
+        </div>
+        <!-- /.login-box-body -->
     </div>
-    <!-- /.login-box-body -->
+    <!-- /.login-box -->
 </div>
-<!-- /.login-box -->
 <!-- jQuery 3 -->
 <script src="<?php echo LTE;?>bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->

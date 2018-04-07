@@ -4,3 +4,6 @@ include_once './includes/functions.php';
 if(!logged_in()) {
     require_once 'views/front.php';
 }
+if($_SESSION['authorized'] == true) {
+    require_once 'views/feed.php';
+}

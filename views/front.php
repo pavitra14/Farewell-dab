@@ -265,7 +265,7 @@ body {
         <br>
         <p class="lead cover-copy">
             Hop on!</p>
-            <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">We are Coming Soon </button></p>
+            <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" onclick="getStarted()">Get started! </button></p>
       </div>
       <div class="mastfoot">
         <div class="inner">
@@ -275,5 +275,10 @@ body {
   </div>
 </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      <script>
+          function getStarted() {
+              location.href = "login.html";
+          }
+      </script>
   </body>
 </html>
