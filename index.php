@@ -4,6 +4,8 @@ include_once './includes/functions.php';
 if(!logged_in()) {
     require_once 'views/front.php';
 }
-if($_SESSION['authorized'] == true) {
+if (isset($_GET['w']) && $_GET['w'] != null) {
+    require_once 'views/write.php';
+}elseif ($_SESSION['authorized'] == true) {
     require_once 'views/feed.php';
 }

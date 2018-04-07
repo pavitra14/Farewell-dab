@@ -269,7 +269,7 @@ body {
       </div>
       <div class="mastfoot">
         <div class="inner">
-            <p>© Pavitra Behre</p>
+            <p>Made with &hearts; by <a href="http://pbehre.in">Pavitra</a>, Ritwik and Sakshi</p>
         </div>
       </div>
   </div>

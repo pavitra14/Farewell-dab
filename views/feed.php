@@ -167,7 +167,7 @@ $fname = $arr_details['fname'];
             <div class="pull-right hidden-xs">
                 <b>Version</b> 0.1.0
             </div>
-            <strong>Copyright &copy; Made with &hearts; by <a href="http://pbehre.in">Pavitra Behre</a> </strong>
+            <strong>Copyright &copy; Made with &hearts; by <a href="http://pbehre.in">Pavitra</a>, Ritwik and Sakshi </strong>
         </div>
         <!-- /.container -->
     </footer>
