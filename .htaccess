@@ -1,3 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine On
 RewriteRule ^(.*)\.html?$ $1.php?%{QUERY_STRING} [L]
+RewriteRule ^w/(.*) index.html?w=$1
