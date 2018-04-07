@@ -134,8 +134,8 @@ if(logged_in()){
                     <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <label for="alumini">Alumini</label>
-                    <input type="checkbox" id="alumini" name="alumini" value="1" class="icheckbox_flat-blue">
+                    <label for="alumni">Alumni</label>
+                    <input type="checkbox" id="alumni" name="alumni" value="1" class="icheckbox_flat-blue">
                 </div>
 
                 <div class="row">
