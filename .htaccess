@@ -1,0 +1,3 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^(.*)\.html?$ $1.php?%{QUERY_STRING} [L]
