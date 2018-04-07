@@ -119,7 +119,7 @@ if(logged_in()){
                 </div>
                 <div class="row">
                     <div class="col-xs-4 pull-left">
-                        <button type="submit" class="btn btn-warning btn-block btn-flat" name="submitR" onclick="location.href='register.html'" value="1">Register!</button>
+                        <button type="button" class="btn btn-warning btn-block btn-flat" name="submitR" onclick="location.href='register.html'" value="1">Register!</button>
                     </div>
                     <div class="col-xs-4 pull-right">
                         <button type="submit" class="btn btn-danger btn-block btn-flat" name="submitL" value="1">Sign In</button>

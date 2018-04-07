@@ -154,7 +154,7 @@ $fname = $arr_details['fname'];
             <!-- Main content -->
             <section class="content">
                 <?php
-                require_once 'templates/feed_box.php';
+                    require_once 'templates/feed_box.php';
                 ?>
             </section>
             <!-- /.content -->
