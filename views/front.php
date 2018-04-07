@@ -244,24 +244,20 @@ body {
 }
 </style>
   </head>
-  <body id="top"><div class="site-wrapper">
+  <body id="top">
+  <div class="site-wrapper">
   <div class="site-wrapper-inner">
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand"> FarewellDab </h3>
-          <nav class="nav nav-masthead">
-            <a class="nav-link nav-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a class="nav-link nav-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a class="nav-link nav-social" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-            <a class="nav-link nav-social" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          </nav>
+          <h3 class="masthead-brand">FarewellDab </h3>
+
         </div>
       </div>
       <br>
       <div class="inner cover">
         <h1 class="cover-heading">FarewellDab</h1>
-        <h5 class="sub-header"> Begins In Few Months </h5>
+        <h5 class="sub-header"> Every goodbye always makes the next hello closer. </h5>
         <br>
         <p class="lead cover-copy">
             Hop on!</p>
