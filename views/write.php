@@ -9,7 +9,7 @@ $w = $_GET['w'];
 if(!logged_in()) {
     $_SESSION['error'] = "You need to login first.";
     $_SESSION['redirect'] = $w;
-    header('Location: login.html');
+    header('Location: ../login.html');
     exit();
 }
 echo $w;

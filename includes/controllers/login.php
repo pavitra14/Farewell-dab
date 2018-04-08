@@ -48,10 +48,12 @@ function logout(){
     unset($_SESSION['authorized']);
     unset($_SESSION['type']);
     unset($_SESSION['arr_details']);
+    unset($_SESSION['redirect']);
     if(isset($_COOKIE['logged_in'])) {
         setcookie("logged_in", "", time() - 3600);
     }
-    header('Location: login.html');
+    session_destroy();
+    header('Location: index.html');
     exit();
 }
 //logout trigger
