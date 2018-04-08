@@ -6,19 +6,24 @@
  * Time: 10:02 PM
  */
 ?>
-<div class="box box-success">
-    <div class="box-header with-border">
-        <h3 class="box-title">{{FROM}} -> {{TO}}</h3>
-    </div>
-    <div class="box-body">
-        {{CONTENT}}
-    </div>
-    <!-- /.box-body -->
-    <div class="box-footer">
-        <div class="row">
-            <div class="col-xs-2"><a href="#">Like</a></div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{FROM}} -> {{TO}}</h3>
+            </div>
+            <div class="box-body">
+                {{CONTENT}}
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <div class="row">
+                    <div class="col-xs-2"><a href="#">Like</a></div>
+                </div>
+            </div>
+            <!-- /.box-footer -->
         </div>
+        <!-- /.box -->
+
     </div>
-    <!-- /.box-footer -->
 </div>
-<!-- /.box -->

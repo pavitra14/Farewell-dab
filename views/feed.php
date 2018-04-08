@@ -29,6 +29,8 @@ $fname = $arr_details['fname'];
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?php echo LTE;?>dist/css/skins/skin-black.css">
+    <!-- Custom CSS sheet app.css -->
+    <link rel="stylesheet" href="assets/css/app.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -154,7 +156,8 @@ $fname = $arr_details['fname'];
             <!-- Main content -->
             <section class="content">
                 <?php
-                    require_once 'templates/feed_box.php';
+                require 'templates/feed_box.php';
+
                 ?>
             </section>
             <!-- /.content -->
