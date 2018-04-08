@@ -165,7 +165,7 @@ $fname = $arr_details['fname'];
         <!-- /.container -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
+    <footer class="main-footer feed">
         <div class="container">
             <div class="pull-right hidden-xs">
                 <b>Version</b> 0.1.0

@@ -22,7 +22,7 @@ function registerUser($post) {
     $query = "INSERT INTO `user_details`(`u_id`, `username`, `password`, `fname`, `lname`, `email`, `session`, `alumni`) VALUES ('$u_id','$username','$password','$fname','$lname','$email', '$session', '$alumni')";
     if(mysqli_query($conn, $query)) {
         //Registration Successfull
-        echo '<script>alert("Registration Successful, You may now login.")</script>';
+        echo '<script>alert("Registration Successful, You may now login.");</script>';
         $_SESSION['success'] ="Registration Successful, You may now login.";
         header('Location: login.html');
         exit();

@@ -59,3 +59,8 @@ require_once 'controllers/gravatar.php';
  * handle user registrations
  */
 require_once 'controllers/register.php';
+
+/**
+ * handle all the functions required by write.php
+ */
+require_once 'controllers/write.php';
