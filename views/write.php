@@ -33,6 +33,8 @@ $w_fname = $w_details['fname'];
 $from_id = $arr_details['u_id'];
 $to_id = $w_details['u_id'];
 $to_email = $w_details['email'];
+$from_name = $fullname;
+$to_fname = $w_fname;
 ?>
 <!DOCTYPE html>
 <html>
@@ -226,6 +228,8 @@ $to_email = $w_details['email'];
                                         <input type="hidden" name="from_id" value="<?=$from_id?>">
                                         <input type="hidden" name="to_id" value="<?=$to_id?>">
                                         <input type="hidden" name="to_email" value="<?=$to_email?>">
+                                        <input type="hidden" name="from_name" value="<?=$from_name?>">
+                                        <input type="hidden" name="to_fname" value="<?=$to_fname?>">;
                                         <input type="hidden" name="msgPost" value="1">
                                         <div class="form-group margin-bottom-none">
                                             <div class="col-sm-12">

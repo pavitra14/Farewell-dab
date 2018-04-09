@@ -31,12 +31,16 @@ function msgPost($post) {
     $p_id = genID();
     $from_id = $post['from_id'];
     $to_id = $post['to_id'];
+    $to_email = $post['to_email'];
+    $to_fname = $post['to_fname'];
+    $from_name = $post['from_name'];
     $msg = $post['msg'];
     $date_created = date("Y-m-d H:i:s");// 2001-03-10 17:16:18 (the MySQL DATETIME format)
     $likes = 0;
     $query = "INSERT INTO `posts`(`p_id`, `from_id`, `to_id`, `msg`, `date_created`, `likes`) VALUES ('$p_id','$from_id','$to_id','$msg','$date_created','$likes')";
     if(mysqli_query($conn, $query)) {
         //post successful
+        mailNewPost($to_email, $from_name, $to_fname);
         return true;
     } else {
         return false;
