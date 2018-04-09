@@ -35,7 +35,7 @@ function construct_headers($from) {
  * @return bool|string
  */
 function construct_email($template) {
-    $file = '../../templates/' . $template;
+    $file = __DIR__ .'/../../templates/' . $template;
     if(file_exists($file)) {
         $html = file_get_contents($file);
         return $html;
