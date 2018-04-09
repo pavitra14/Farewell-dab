@@ -4,7 +4,7 @@
  * contains all the controllers and core functionality
  */
 
-ini_set("display_errors", "0"); // Should be disabled in production, disabled in remote server
+ini_set("display_errors", "1"); // Should be disabled in production, disabled in remote server
 ob_start();
 session_start();
 //Some definations requried for the theme 
@@ -45,6 +45,10 @@ function escape($data) {
     return mysqli_real_escape_string($conn, $data);
 }
 
+/**
+ * handle all the outgoing emails and email templates.
+ */
+require_once 'controllers/email.php';
 /**
  * login/logout functions
  */
