@@ -229,7 +229,7 @@ $to_fname = $w_fname;
                                         <input type="hidden" name="to_id" value="<?=$to_id?>">
                                         <input type="hidden" name="to_email" value="<?=$to_email?>">
                                         <input type="hidden" name="from_name" value="<?=$from_name?>">
-                                        <input type="hidden" name="to_fname" value="<?=$to_fname?>">;
+                                        <input type="hidden" name="to_fname" value="<?=$to_fname?>">
                                         <input type="hidden" name="msgPost" value="1">
                                         <div class="form-group margin-bottom-none">
                                             <div class="col-sm-12">

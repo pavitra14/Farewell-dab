@@ -19,6 +19,9 @@ if($_POST['msgPost'] == 1) {
     if($status == true) {
         //Post successfull!
         echo '<script>alert("Posted on their Dab wall!");</script>';
+        mailNewPost($post['to_email'], trim($post['from_name']), trim($post['to_fname']));
+    } else {
+        exit(json_encode($post));
     }
 }
 
