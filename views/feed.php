@@ -120,7 +120,7 @@ $fname = $arr_details['fname'];
                                     <div class="row">
                                         <div class="col-xs-12 text-center">
                                             <p>Your write up link - </p>
-                                            <a href="http://farewell.pbehre.in/w/<?=$arr_details['username']?>" target="_blank">http://farewell.pbehre.in/w/<?=$arr_details['username']?></a>
+                                            <a href="http://farewell.pbehre.in/?w=<?=$arr_details['username']?>" target="_blank">http://farewell.pbehre.in/?w=<?=$arr_details['username']?></a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
