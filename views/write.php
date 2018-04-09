@@ -14,13 +14,13 @@ if(!logged_in()) {
     exit();
 }
 $w_details = getfromW($w);
+$arr_details = $_SESSION['arr_details'];
 if($w_details == null) {
     //illegal page access, return to home
     header('Location: index.html');
     exit();
 }
 //Details of the writer
-$arr_details = $_SESSION['arr_details'];
 $gravurl = gravatar($arr_details['email']);
 $fullname = $arr_details['fname'] . ' ' . $arr_details['lname'];
 $fname = $arr_details['fname'];
@@ -145,7 +145,8 @@ $to_fname = $w_fname;
                                 <li class="user-body">
                                     <div class="row">
                                         <div class="col-xs-12 text-center">
-                                            <a href="#">Random Quote here.</a>
+                                            <p>Your write up link - </p>
+                                            <a href="http://farewell.pbehre.in/w/<?=$arr_details['username']?>" target="_blank">http://farewell.pbehre.in/w/<?=$arr_details['username']?></a>
                                         </div>
                                     </div>
                                     <!-- /.row -->
@@ -281,6 +282,18 @@ $to_fname = $w_fname;
 <script src="<?php echo LTE;?>bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo LTE;?>dist/js/adminlte.min.js"></script>
+<script>
+    function disableTextarea() {
+        $('#write :input').prop("readonly", true);
+    }
+</script>
+<?php
+//a check to prevent the user to write for themselves.
+if ($w_details['u_id'] == $arr_details['u_id']) {
+    //you cannot write for yourself
+    echo '<script>alert("You cannot write for yourself :(");disableTextarea();</script>';
+}
+?>
 </body>
 </html>
 
