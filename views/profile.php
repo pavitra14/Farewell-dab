@@ -13,35 +13,18 @@ if(!logged_in()) {
     header('Location: ../login.html');
     exit();
 }
-$w_details = getfromW($w);
 $arr_details = $_SESSION['arr_details'];
-if($w_details == null) {
-    //illegal page access, return to home
-    header('Location: index.html');
-    exit();
-}
-//Details of the writer
 $gravurl = gravatar($arr_details['email']);
 $fullname = $arr_details['fname'] . ' ' . $arr_details['lname'];
 $fname = $arr_details['fname'];
-//details of the receiver
-$w_gravurl = gravatar($w_details['email']);
-$w_fullname = $w_details['fname'] . ' ' . $w_details['lname'];
-$w_fname = $w_details['fname'];
-
-//ids to identify the post
-$from_id = $arr_details['u_id'];
-$to_id = $w_details['u_id'];
-$to_email = $w_details['email'];
-$from_name = $fullname;
-$to_fname = $w_fname;
+?>
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?=$w_fullname?> | Write</title>
+    <title><?=$fullname?> | Profile</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -67,6 +50,12 @@ $to_fname = $w_fname;
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!-- jQuery 3 -->
+    <script src="<?php echo LTE;?>bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Dynamic Feed -->
+    <script src="./assets/js/feed.js"></script>
+    <!-- Like button -->
+    <script src="./assets/js/like.js"></script>
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-black layout-top-nav">
@@ -189,11 +178,11 @@ $to_fname = $w_fname;
                     <!-- Profile Image -->
                     <div class="box box-primary">
                         <div class="box-body box-profile">
-                            <img class="profile-user-img img-responsive img-circle" src="<?=$w_gravurl?>" alt="User profile picture">
+                            <img class="profile-user-img img-responsive img-circle" src="<?=$gravurl?>" alt="User profile picture">
 
-                            <h3 class="profile-username text-center"><?=$w_fullname?></h3>
+                            <h3 class="profile-username text-center"><?=$fullname?></h3>
 
-                            <p class="text-muted text-center">Session: <?=$w_details['session']?></p>
+                            <p class="text-muted text-center">Session: <?=$arr_details['session']?></p>
 
                             <ul class="list-group list-group-unbordered">
                                 <li class="list-group-item">
@@ -213,37 +202,16 @@ $to_fname = $w_fname;
                         </ul>
                         <div class="tab-content">
                             <div class="active tab-pane" id="activity">
-                                <!-- Post -->
-                                <div class="post clearfix">
-                                    <div class="user-block">
-                                        <img class="img-circle img-bordered-sm" src="<?=$gravurl?>" alt="User Image">
-                                        <span class="username">
-                                            <a href="#"><?=$fullname?></a>
-                                        </span>
-                                        <span class="description">Give them a good farewell ;)</span>
-                                    </div>
-                                    <!-- /.user-block -->
-
-
-                                    <form class="form-horizontal" id="write" method="post">
-                                        <input type="hidden" name="from_id" value="<?=$from_id?>">
-                                        <input type="hidden" name="to_id" value="<?=$to_id?>">
-                                        <input type="hidden" name="to_email" value="<?=$to_email?>">
-                                        <input type="hidden" name="from_name" value="<?=$from_name?>">
-                                        <input type="hidden" name="to_fname" value="<?=$to_fname?>">
-                                        <input type="hidden" name="msgPost" value="1">
-                                        <div class="form-group margin-bottom-none">
-                                            <div class="col-sm-12">
-                                                <textarea name="msg" id="" cols="30" rows="6"
-                                                          class="form-control input-sm" placeholder="Write here!" required="required"></textarea>
-                                            </div>
-                                            <div class="col-sm-3 pull-right">
-                                                <button type="submit" class="btn btn-danger pull-right btn-block btn-sm">Send</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div id="feedContent">
+                                    <?php
+                                        echo getUserFeed($arr_details['u_id']);
+                                    ?>
                                 </div>
-                                <!-- /.post -->
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div id="loader-icon"><i class="fa fa-spinner fa-spin"></i></div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.tab-pane -->
 
@@ -282,18 +250,6 @@ $to_fname = $w_fname;
 <script src="<?php echo LTE;?>bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo LTE;?>dist/js/adminlte.min.js"></script>
-<script>
-    function disableTextarea() {
-        $('#write :input').prop("readonly", true);
-    }
-</script>
-<?php
-//a check to prevent the user to write for themselves.
-if ($w_details['u_id'] == $arr_details['u_id']) {
-    //you cannot write for yourself
-    echo '<script>alert("You cannot write for yourself :(");disableTextarea();</script>';
-}
-?>
 </body>
 </html>
 

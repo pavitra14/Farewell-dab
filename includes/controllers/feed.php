@@ -65,6 +65,9 @@ function getFeed(){
     print $output;
 }
 
+/**
+ * to handle like button ajax calls
+ */
 function like() {
     global $conn;
     if(!empty($_POST['p_id'])) {
@@ -81,4 +84,36 @@ function like() {
 
         }
     }
+}
+
+function getUserFeed($u_id) {
+    global $conn;
+    $query = "SELECT * FROM posts WHERE to_id='$u_id'";
+    $result = mysqli_query($conn, $query);
+    $output = '';
+    if(mysqli_num_rows($result) != 0) {
+        $feedCont = getFeedTemplate();
+        //die(json_encode($r));
+        //foreach ($r as $q) {
+        while ($q = mysqli_fetch_array($result)) {
+            $POST_ID = $q['p_id'];
+            $CONTENT = $q['msg'];
+            $LIKES = $q['likes'];
+            $from_user = getUserFromUID($q['from_id']);
+            $to_user = getUserFromUID($q['to_id']);
+            $FROM = $from_user['fname'] . ' ' . $from_user['lname'];
+            $TO = $to_user['fname'] . ' ' . $to_user['lname'];
+            $post = str_replace("[[FROM]]", $FROM, $feedCont);
+            $post = str_replace("[[TO]]", $TO, $post);
+            $post = str_replace("[[CONTENT]]", $CONTENT, $post);
+            $post = str_replace("[[POST_ID]]", $POST_ID, $post);
+            $post = str_replace("[[LIKES]]", $LIKES, $post);
+            $post = str_replace("col-md-8 col-md-offset-2", "col-md-12", $post); // A Small fix for profile page
+            $post = str_replace("box-success", "", $post); //A Smal UI fix for profile page
+            $output .= $post;
+        }
+    }else {
+        $output .= "No new messages.";
+    }
+    return $output;
 }

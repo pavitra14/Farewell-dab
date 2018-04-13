@@ -30,7 +30,9 @@ if($_POST['msgPost'] == 1) {
 
 //if-elseif statements to handle custom views.
 //these are to be at the last.
-if (isset($_GET['w']) && $_GET['w'] != null) {
+if(!empty($_GET['profile'])){
+    require_once 'views/profile.php';
+}elseif (isset($_GET['w']) && $_GET['w'] != null) {
     require_once 'views/write.php';
 }elseif ($_SESSION['authorized'] == true) {
     require_once 'views/feed.php';

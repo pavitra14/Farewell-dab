@@ -135,7 +135,7 @@ $fname = $arr_details['fname'];
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        <a href="?profile=1" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="?logout" class="btn btn-default btn-flat">Sign out</a>
