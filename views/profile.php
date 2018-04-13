@@ -18,7 +18,6 @@ $gravurl = gravatar($arr_details['email']);
 $fullname = $arr_details['fname'] . ' ' . $arr_details['lname'];
 $fname = $arr_details['fname'];
 ?>
-?>
 <!DOCTYPE html>
 <html>
 <head>
