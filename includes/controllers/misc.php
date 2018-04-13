@@ -21,3 +21,15 @@ function getUserFromUID($u_id){
         return null;
     }
 }
+
+/**
+ * @param User ID
+ * @return No. of Posts
+ */
+function countPosts($u_id) {
+    global $conn;
+    $query = "SELECT * FROM posts WHERE to_id='$u_id'";
+    $result = mysqli_query($conn, $query);
+    $rows = mysqli_num_rows($result);
+    return $rows;
+}

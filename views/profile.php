@@ -185,7 +185,7 @@ $fname = $arr_details['fname'];
 
                             <ul class="list-group list-group-unbordered">
                                 <li class="list-group-item">
-                                    <b>Posts</b> <a class="pull-right">{{TODO}}</a>
+                                    <b>Posts</b> <a class="pull-right"><?=countPosts($arr_details['u_id'])?></a>
                                 </li>
                             </ul>
                         </div>

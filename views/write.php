@@ -197,7 +197,7 @@ $to_fname = $w_fname;
 
                             <ul class="list-group list-group-unbordered">
                                 <li class="list-group-item">
-                                    <b>Posts</b> <a class="pull-right">{{TODO}}</a>
+                                    <b>Posts</b> <a class="pull-right"><?=countPosts($to_id)?></a>
                                 </li>
                             </ul>
                         </div>
