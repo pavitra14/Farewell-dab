@@ -46,6 +46,11 @@ function escape($data) {
 }
 
 /**
+ * Handle all the miscellaneous functions
+ */
+require_once 'controllers/misc.php';
+
+/**
  * handle all the outgoing emails and email templates.
  */
 require_once 'controllers/email.php';
@@ -68,3 +73,7 @@ require_once 'controllers/register.php';
  * handle all the functions required by write.php
  */
 require_once 'controllers/write.php';
+/**
+ * handle feed
+ */
+require_once 'controllers/feed.php';

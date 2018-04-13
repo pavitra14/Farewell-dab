@@ -1,29 +1,23 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: pavitra14
- * Date: 7/4/18
- * Time: 10:02 PM
- */
-?>
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h3 class="box-title">{{FROM}} -> {{TO}}</h3>
+                <h3 class="box-title"><strong>[[FROM]]</strong> -> <strong>[[TO]]</strong></h3>
             </div>
             <div class="box-body">
-                {{CONTENT}}
+                [[CONTENT]]
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
                 <div class="row">
-                    <div class="col-xs-2"><a href="#">Like</a></div>
+                    <div class="col-xs-1"><a href="#" onclick="likePost('[[POST_ID]]');">Like</a></div>
+                    <div class="col-md-1 pull-left"><div id="likes-[[POST_ID]]">[[LIKES]]</div></div>
                 </div>
             </div>
             <!-- /.box-footer -->
         </div>
         <!-- /.box -->
-
     </div>
+    <!-- /.col-md-8 col-md-offset-2 -->
 </div>
+<!-- /.row -->

@@ -41,6 +41,13 @@ $fname = $arr_details['fname'];
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- jQuery 3 -->
+    <script src="<?php echo LTE;?>bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Dynamic Feed -->
+    <script src="./assets/js/feed.js"></script>
+    <!-- Like button -->
+    <script src="./assets/js/like.js"></script>
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-black layout-top-nav">
@@ -156,17 +163,23 @@ $fname = $arr_details['fname'];
 
             <!-- Main content -->
             <section class="content">
-                <?php
-                require 'templates/feed_box.php';
-
-                ?>
+                <div id="feedContent">
+                    <?php
+                    include 'includes/feedContent.php';
+                    ?>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div id="loader-icon"><i class="fa fa-spinner fa-spin"></i></div>
+                    </div>
+                </div>
             </section>
             <!-- /.content -->
         </div>
         <!-- /.container -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer feed">
+    <footer class="main-footer feed-footer">
         <div class="container">
             <div class="pull-right hidden-xs">
                 <b>Version</b> 0.1.0
