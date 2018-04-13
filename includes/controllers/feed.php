@@ -59,6 +59,26 @@ function getFeed(){
             $post = str_replace("[[LIKES]]", $LIKES, $post);
             $output .= $post;
         }
+    } else {
+        $output .= 'No new posts!';
     }
     print $output;
+}
+
+function like() {
+    global $conn;
+    if(!empty($_POST['p_id'])) {
+        $p_id = $_POST['p_id'];
+        switch ($_POST['action']) {
+            case "like":
+                $query = "UPDATE posts SET likes=likes+1 WHERE p_id = '$p_id'";
+                mysqli_query($conn,$query);
+                break;
+            case "unlike":
+                $query = "UPDATE posts SET likes=likes-1 WHERE p_id = '$p_id'";
+                mysqli_query($conn, $query);
+                break;
+
+        }
+    }
 }

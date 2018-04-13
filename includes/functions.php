@@ -74,6 +74,6 @@ require_once 'controllers/register.php';
  */
 require_once 'controllers/write.php';
 /**
- * handle feed
+ * handle feed and likes
  */
 require_once 'controllers/feed.php';

@@ -7,4 +7,8 @@
  * purpose - This file will handle all the feed related ajax queries
  */
 include_once 'functions.php';
-getFeed();
+if(!empty($_GET['like'])) {
+    like();
+} else {
+    getFeed();
+}
