@@ -66,8 +66,8 @@ $fname = $arr_details['fname'];
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Feed <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">My Profile</a></li>
+                        <li class="active"><a href="index.html">Feed <span class="sr-only">(current)</span></a></li>
+                        <li><a href="?profile=1">My Profile</a></li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
