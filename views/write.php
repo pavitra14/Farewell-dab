@@ -291,7 +291,7 @@ $to_fname = $w_fname;
 //a check to prevent the user to write for themselves.
 if ($w_details['u_id'] == $arr_details['u_id']) {
     //you cannot write for yourself
-    echo '<script>alert("You cannot write for yourself :(");disableTextarea();</script>';
+    echo '<script>alert("You cannot write for yourself :( Share this link with others!");disableTextarea();</script>';
 }
 ?>
 </body>
