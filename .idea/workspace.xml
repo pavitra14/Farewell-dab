@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e4681f-a919-4505-87ec-ac47f772203f" name="Default" comment="">
+    <list default="true" id="06e4681f-a919-4505-87ec-ac47f772203f" name="Default" comment="Added service worker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offline.php" beforeDir="false" afterPath="$PROJECT_DIR$/offline.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/front.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/front.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,22 +39,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="front.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/front.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="pwabuilder-sw.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="pwabuilder-sw-register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="126">
+              <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="offline.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="offline.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/offline.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -106,8 +114,9 @@
         <option value="$PROJECT_DIR$/views/profile.php" />
         <option value="$PROJECT_DIR$/views/write.php" />
         <option value="$PROJECT_DIR$/includes/controllers/gravatar.php" />
-        <option value="$PROJECT_DIR$/offline.php" />
+        <option value="$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js" />
         <option value="$PROJECT_DIR$/views/front.php" />
+        <option value="$PROJECT_DIR$/offline.php" />
       </list>
     </option>
   </component>
@@ -201,6 +210,19 @@
             <path>
               <item name="Farewell-dab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Farewell-dab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Farewell-dab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Farewell-dab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ServiceWorker1" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Farewell-dab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Farewell-dab" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -270,7 +292,7 @@
       <workItem from="1523186702008" duration="6236000" />
       <workItem from="1523296342237" duration="10131000" />
       <workItem from="1523640217963" duration="10078000" />
-      <workItem from="1523683846558" duration="2047000" />
+      <workItem from="1523683846558" duration="2760000" />
     </task>
     <task id="LOCAL-00001" summary="Added feed_box template which will be later used for dynamic feed generation">
       <created>1523119928815</created>
@@ -440,11 +462,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523685165269</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added a Offline page for PWA">
+      <created>1523685925630</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1523685925630</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added service worker">
+      <created>1523686442825</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1523686442825</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50839000" />
+    <option name="totallyTimeSpent" value="51552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="32" width="1849" height="1048" extended-state="6" />
@@ -484,7 +520,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Added feed_box template which will be later used for dynamic feed generation" />
     <MESSAGE value="Updated Registration page" />
     <MESSAGE value="Fixed registration page typo" />
     <MESSAGE value="Updated Footer.&#10;Other - other added basic write.php checks" />
@@ -508,23 +543,11 @@
     <MESSAGE value="Added Post Counter" />
     <MESSAGE value="Added https" />
     <MESSAGE value="Gravatar https fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gravatar https fix" />
+    <MESSAGE value="Added a Offline page for PWA" />
+    <MESSAGE value="Added service worker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added service worker" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/controllers/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/front.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4662">
@@ -894,19 +917,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/offline.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="126">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/front.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/offline.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
