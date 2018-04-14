@@ -17,7 +17,7 @@
     <!-- Bootstrap & font awesome Css ---->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+      <script src="assets/js/ServiceWorker1/pwabuilder-sw-register.js"></script>
     <style>
     /*
  * Globals
