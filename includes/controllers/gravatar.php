@@ -13,6 +13,6 @@
  */
 function gravatar($email = '', $size = 60, $rating = 'pg' ) {
     $email = md5(strtolower(trim($email)));
-    $gravurl = "http://www.gravatar.com/avatar/$email?s=$size&r=$rating";
+    $gravurl = "https://www.gravatar.com/avatar/$email?s=$size&r=$rating";
     return $gravurl;
 }
