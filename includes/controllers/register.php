@@ -9,11 +9,11 @@
 function registerUser($post) {
     global $conn;
     $u_id = genID();
-    $username = $post['user'];
-    $password = md5($post['pass']);
-    $fname = $post['fname'];
-    $lname = $post['lname'];
-    $email = $post['email'];
+    $username = trim($post['user']);
+    $password = md5(trim($post['pass']));
+    $fname = trim($post['fname']);
+    $lname = trim($post['lname']);
+    $email = trim($post['email']);
     $session = $post['session'];
     $alumni = 0;
     if(isset($post['alumni'])) {
