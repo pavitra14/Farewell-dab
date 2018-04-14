@@ -265,7 +265,7 @@ body {
       </div>
       <div class="mastfoot">
         <div class="inner">
-            <p>Made with &hearts; by <a href="http://pbehre.in">Pavitra</a>, Ritwik and Sakshi</p>
+            <p>Made with &hearts; by <a href="https://pbehre.in">Pavitra</a>, Ritwik and Sakshi</p>
         </div>
       </div>
   </div>

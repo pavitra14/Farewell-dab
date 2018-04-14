@@ -74,7 +74,7 @@ function mailNewAccount($to, $fname, $username) {
     $message = construct_email($templates['new_account']);
     $subject = $subjects['new_account'];
     $message = str_replace("[[FIRST_NAME]]", $fname, $message); //replace the first parameter
-    $write_link = 'http://farewell.pbehre.in/?w=' . $username;
+    $write_link = 'https://farewell.pbehre.in/?w=' . $username;
     $message = str_replace("[[WRITE_LINK]]", $write_link, $message); //replace the 2nd parameter
     return sendMail($to, $subject, $message, $headers);
 }
