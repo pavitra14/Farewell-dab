@@ -9,6 +9,10 @@
 include_once 'functions.php';
 if(!empty($_GET['like'])) {
     like();
+}elseif(!empty($_GET['search_key'])) {
+    search();
+}elseif(!empty($_GET['full_name'])){
+    getURLFromName();
 } else {
     getFeed();
 }

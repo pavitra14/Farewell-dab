@@ -33,3 +33,27 @@ function countPosts($u_id) {
     $rows = mysqli_num_rows($result);
     return $rows;
 }
+
+/**
+ * To get writeup url from full name
+ * @return Write up Link
+ */
+function getURLFromName(){
+    global $conn;
+    $full_name = trim($_GET['full_name']);
+    $arr_name = explode(" ", $full_name);
+    $fname = $arr_name[0];
+    $lname = $arr_name[1];
+    $query = "SELECT * FROM user_details WHERE fname='$fname' AND lname='$lname'";
+    $result=mysqli_query($conn, $query);
+    $output = '';
+    if(mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_array($result);
+        $username = $row['username'];
+        $output = "https://farewell.pbehre.in/?w=";
+        $output .= $username;
+    } else {
+        $output = "#";
+    }
+    print $output;
+}

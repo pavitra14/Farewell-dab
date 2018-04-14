@@ -66,6 +66,7 @@ $fname = $arr_details['fname'];
     <script src="./assets/js/feed.js"></script>
     <!-- Like button -->
     <script src="./assets/js/like.js"></script>
+
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-black layout-top-nav">
@@ -89,7 +90,7 @@ $fname = $arr_details['fname'];
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+                            <input type="text" class="form-control" name="typeahead" id="navbar-search-input" placeholder="Search">
                         </div>
                     </form>
                 </div>
@@ -220,5 +221,8 @@ $fname = $arr_details['fname'];
 <!-- AdminLTE App -->
 <script src="<?php echo LTE;?>dist/js/adminlte.min.js"></script>
 <script src="assets/js/manup.js"></script>
+<!-- Type Ahead search -->
+<script src="./assets/js/typeahead.js/dist/typeahead.min.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
 </html>

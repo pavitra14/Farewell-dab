@@ -117,3 +117,19 @@ function getUserFeed($u_id) {
     }
     return $output;
 }
+
+/**
+ * To handle navbar search
+ */
+function search(){
+    global $conn;
+    $key = $_GET['search_key'];
+    $query = "SELECT * FROM user_details WHERE username LIKE '%$key%' OR  fname LIKE '%$key%' OR lname LIKE '%$key%' OR email LIKE '%$key%'";
+    $result = mysqli_query($conn, $query);
+    $array = array();
+    while($row=mysqli_fetch_array($result)){
+        $array[] = $row['fname'] . ' ' . $row['lname'];
+    }
+    $output = json_encode($array);
+    print $output;
+}
