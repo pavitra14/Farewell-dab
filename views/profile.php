@@ -68,8 +68,6 @@ $fname = $arr_details['fname'];
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <!-- jQuery 3 -->
     <script src="<?php echo LTE;?>bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Dynamic Feed -->
-    <script src="./assets/js/feed.js"></script>
     <!-- Like button -->
     <script src="./assets/js/like.js"></script>
 </head>
@@ -112,13 +110,13 @@ $fname = $arr_details['fname'];
                                 <span class="label label-warning">10</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">You have 10 notifications</li>
+                                <li class="header">You have [[X]] notifications</li>
                                 <li>
                                     <!-- Inner Menu: contains the notifications -->
                                     <ul class="menu">
                                         <li><!-- start notification -->
                                             <a href="#">
-                                                <i class="fa fa-users text-aqua"></i> 5 new messages on your wall.
+                                                <i class="fa fa-users text-aqua"></i> This feature will be available soon.
                                             </a>
                                         </li>
                                         <!-- end notification -->
@@ -214,7 +212,7 @@ $fname = $arr_details['fname'];
                 <div class="col-md-9">
                     <div class="nav-tabs-custom">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#" data-toggle="tab">Dab Board</a></li>
+                            <li class="active"><a href="#activity" data-toggle="tab">Dab Board</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="active tab-pane" id="activity">

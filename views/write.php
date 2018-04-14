@@ -81,6 +81,8 @@ $to_fname = $w_fname;
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- Like button -->
+    <script src="./assets/js/like.js"></script>
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -124,13 +126,13 @@ $to_fname = $w_fname;
                                 <span class="label label-warning">10</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">You have 10 notifications</li>
+                                <li class="header">You have [[X]] notifications</li>
                                 <li>
                                     <!-- Inner Menu: contains the notifications -->
                                     <ul class="menu">
                                         <li><!-- start notification -->
                                             <a href="#">
-                                                <i class="fa fa-users text-aqua"></i> 5 new messages on your wall.
+                                                <i class="fa fa-users text-aqua"></i> This feature will be available soon.
                                             </a>
                                         </li>
                                         <!-- end notification -->
@@ -226,10 +228,11 @@ $to_fname = $w_fname;
                 <div class="col-md-9">
                     <div class="nav-tabs-custom">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#" data-toggle="tab">Dab Board</a></li>
+                            <li class="active"><a href="#write" data-toggle="tab">Write</a></li>
+                            <li><a href="#dab" data-toggle="tab">Dab Board.</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div class="active tab-pane" id="activity">
+                            <div class="active tab-pane" id="write">
                                 <!-- Post -->
                                 <div class="post clearfix">
                                     <div class="user-block">
@@ -263,9 +266,19 @@ $to_fname = $w_fname;
                                 <!-- /.post -->
                             </div>
                             <!-- /.tab-pane -->
+                            <div class="tab-pane" id="dab">
+                                <div id="feedContent">
+                                    <?php
+                                    echo getUserFeed($to_id);
+                                    ?>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
 
                         </div>
                         <!-- /.tab-content -->
+
+
                     </div>
                     <!-- /.nav-tabs-custom -->
                 </div>

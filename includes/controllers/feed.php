@@ -109,7 +109,7 @@ function getUserFeed($u_id) {
             $post = str_replace("[[POST_ID]]", $POST_ID, $post);
             $post = str_replace("[[LIKES]]", $LIKES, $post);
             $post = str_replace("col-md-8 col-md-offset-2", "col-md-12", $post); // A Small fix for profile page
-            $post = str_replace("box-success", "", $post); //A Smal UI fix for profile page
+            $post = str_replace("box-success", "box-info", $post); //A Smal UI fix for profile page
             $output .= $post;
         }
     }else {
