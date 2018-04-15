@@ -57,3 +57,43 @@ function getURLFromName(){
     }
     print $output;
 }
+
+/**
+ * To enforce ssl
+ */
+function requireSSL() {
+    if(empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== "on")
+    {
+        header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+        exit();
+    }
+}
+
+/**
+ * @return bool
+ */
+function isLocalhost() {
+    if($_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * To generate random ids
+ * @return int
+ */
+function genID() {
+    $id = mt_rand(1,999999);
+    return $id;
+}
+
+/**
+ * @param $data
+ * @return string
+ */
+function escape($data) {
+    global $conn;
+    return mysqli_real_escape_string($conn, $data);
+}

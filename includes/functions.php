@@ -4,7 +4,7 @@
  * contains all the controllers and core functionality
  */
 
-ini_set("display_errors", "0"); // Should be disabled in production, disabled in remote server
+ini_set("display_errors", "1"); // Should be disabled in production, disabled in remote server
 ob_start();
 session_start();
 //Some definations requried for the theme 
@@ -28,28 +28,13 @@ if (mysqli_connect_errno($conn)) {
 require_once 'controllers/errors.php';
 
 /**
- * To generate random ids
- * @return int
- */
-function genID() {
-    $id = mt_rand(1,999999);
-    return $id;
-}
-
-/**
- * @param $data
- * @return string
- */
-function escape($data) {
-    global $conn;
-    return mysqli_real_escape_string($conn, $data);
-}
-
-/**
  * Handle all the miscellaneous functions
  */
 require_once 'controllers/misc.php';
-
+//Force SSL if production server
+if(!isLocalhost()) {
+    requireSSL();
+}
 /**
  * handle all the outgoing emails and email templates.
  */
