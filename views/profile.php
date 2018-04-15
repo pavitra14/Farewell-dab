@@ -266,7 +266,7 @@ $fname = $arr_details['fname'];
 <script src="<?php echo LTE;?>dist/js/adminlte.min.js"></script>
 <script src="assets/js/manup.js"></script>
 <!-- Type Ahead search -->
-<script src="./assets/js/typeahead.js/dist/typeahead.min.js"></script>
+<script src="./assets/js/typeahead/dist/typeahead.min.js"></script>
 <script src="./assets/js/search.js"></script>
 </body>
 </html>
