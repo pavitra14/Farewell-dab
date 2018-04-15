@@ -13,6 +13,8 @@ if(!empty($_GET['like'])) {
     search();
 }elseif(!empty($_GET['full_name'])){
     getURLFromName();
+}elseif(!empty($_GET['delete'])){
+    deletePost();
 } else {
     getFeed();
 }

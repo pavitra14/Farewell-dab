@@ -1,5 +1,5 @@
 /**
- * Function to handle likes
+ * Function to handle likes and actions
  * @param id
  * @param action
  */
@@ -33,5 +33,23 @@ function likePost(p_id) {
         addLikes(p_id, 'like');
     } else {
         addLikes(p_id, 'unlike');
+    }
+}
+
+function reportPost(p_id) {
+    alert("Will be available soon!");
+}
+
+function deletePost(p_id){
+    if(confirm("Are you sure you want to delete this post?")) {
+        $.ajax({
+            url: "includes/feedContent.html?delete=1",
+            data:'p_id='+p_id,
+            type: "POST",
+            success: function(data){
+                alert("Post deleted.");
+                location.reload();
+            }
+        });
     }
 }

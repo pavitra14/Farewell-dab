@@ -218,7 +218,7 @@ $fname = $arr_details['fname'];
                             <div class="active tab-pane" id="activity">
                                 <div id="feedContent">
                                     <?php
-                                        echo getUserFeed($arr_details['u_id']);
+                                        echo getUserFeed($arr_details['u_id'], "profile");
                                     ?>
                                 </div>
                                 <div class="row">

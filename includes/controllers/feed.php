@@ -57,6 +57,9 @@ function getFeed(){
             $post = str_replace("[[CONTENT]]", $CONTENT, $post);
             $post = str_replace("[[POST_ID]]", $POST_ID, $post);
             $post = str_replace("[[LIKES]]", $LIKES, $post);
+            $post = str_replace("[[ACTION_CSS]]", "warning", $post);
+            $post = str_replace("[[ACTION_CLICK]]", "reportPost('".$POST_ID."')", $post);
+            $post = str_replace("[[ACTION]]", "Report", $post);
             $output .= $post;
         }
     } else {
@@ -86,7 +89,12 @@ function like() {
     }
 }
 
-function getUserFeed($u_id) {
+/**
+ * @param $u_id
+ * @param $mode
+ * @return string
+ */
+function getUserFeed($u_id, $mode) {
     global $conn;
     $query = "SELECT * FROM posts WHERE to_id='$u_id'";
     $result = mysqli_query($conn, $query);
@@ -110,6 +118,15 @@ function getUserFeed($u_id) {
             $post = str_replace("[[LIKES]]", $LIKES, $post);
             $post = str_replace("col-md-8 col-md-offset-2", "col-md-12", $post); // A Small fix for profile page
             $post = str_replace("box-success", "box-info", $post); //A Smal UI fix for profile page
+            if($mode == "write") {
+                $post = str_replace("[[ACTION_CSS]]", "warning", $post);
+                $post = str_replace("[[ACTION_CLICK]]", "reportPost('".$POST_ID."')", $post);
+                $post = str_replace("[[ACTION]]", "Report", $post);
+            } elseif($mode == "profile") {
+                $post = str_replace("[[ACTION_CSS]]", "danger", $post);
+                $post = str_replace("[[ACTION_CLICK]]", "deletePost('".$POST_ID."')", $post);
+                $post = str_replace("[[ACTION]]", "Delete", $post);
+            }
             $output .= $post;
         }
     }else {
@@ -132,4 +149,16 @@ function search(){
     }
     $output = json_encode($array);
     print $output;
+}
+
+/**
+ * to handle post deletes
+ */
+function deletePost() {
+    global $conn;
+    if(!empty($_POST['p_id'])) {
+        $p_id = $_POST['p_id'];
+        $query = "DELETE FROM posts WHERE p_id='$p_id'";
+        mysqli_query($conn,$query);
+    }
 }

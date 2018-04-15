@@ -269,7 +269,7 @@ $to_fname = $w_fname;
                             <div class="tab-pane" id="dab">
                                 <div id="feedContent">
                                     <?php
-                                    echo getUserFeed($to_id);
+                                    echo getUserFeed($to_id, "write");
                                     ?>
                                 </div>
                             </div>
