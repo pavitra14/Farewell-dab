@@ -17,8 +17,13 @@ function login($user, $pass) {
         $result = mysqli_query($conn,$query);
         if(mysqli_num_rows($result) == 1) {
             $_SESSION['authorized'] = true;
-            $_SESSION['arr_details'] = mysqli_fetch_array($result);
-            $_SESSION['type'] = $_SESSION['arr_details']['passout'];
+            $arr_details = mysqli_fetch_array($result);
+            $_SESSION['arr_details'] = $arr_details;
+            if($arr_details['isAdmin'] == 0) {
+                $_SESSION['admin'] = true;
+            } else {
+                $_SESSION['admin'] = false;
+            }
             header('Location: index.html');
             exit();
         } else {

@@ -172,11 +172,14 @@ $to_fname = $w_fname;
                                 </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="?profile=1" class="btn btn-default btn-flat">Profile</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="?logout" class="btn btn-default btn-flat">Sign out</a>
+                                    <div class="row">
+                                        <div class="col-sm-4 pull-left">
+                                            <a href="?profile=1" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                       <?=ifAdmin()?>
+                                        <div class="col-sm-4 pull-right">
+                                            <a href="?logout" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
