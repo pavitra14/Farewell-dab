@@ -40,7 +40,7 @@ function msgPost($post) {
         //post successful
         return true;
     } else {
-        die(mysqli_error($conn));
+        //die(mysqli_error($conn));
         return false;
     }
 }

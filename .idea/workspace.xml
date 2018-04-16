@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="06e4681f-a919-4505-87ec-ac47f772203f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ServiceWorker1/pwabuilder-sw-register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/controllers/write.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/controllers/write.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/feed_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feed_box.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,6 +56,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="misc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/controllers/misc.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="write.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="write.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/controllers/write.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="640">
+              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -75,8 +86,21 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            <state relative-caret-position="173">
+              <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feed_box.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/feed_box.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="111" selection-start-line="25" selection-start-column="111" selection-end-line="25" selection-end-column="111" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,7 +163,6 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/offline.php" />
-        <option value="$PROJECT_DIR$/assets/css/app.css" />
         <option value="$PROJECT_DIR$/assets/js/search.js" />
         <option value="$PROJECT_DIR$/includes/controllers/register.php" />
         <option value="$PROJECT_DIR$/test.php" />
@@ -153,12 +176,13 @@
         <option value="$PROJECT_DIR$/assets/js/like.js" />
         <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/views/front.php" />
-        <option value="$PROJECT_DIR$/templates/feed_box.html" />
         <option value="$PROJECT_DIR$/includes/controllers/misc.php" />
         <option value="$PROJECT_DIR$/views/feed.php" />
         <option value="$PROJECT_DIR$/views/profile.php" />
         <option value="$PROJECT_DIR$/views/write.php" />
         <option value="$PROJECT_DIR$/includes/controllers/write.php" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/templates/feed_box.html" />
       </list>
     </option>
   </component>
@@ -248,6 +272,12 @@
               <item name="Farewell-dab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Farewell-dab" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Farewell-dab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Farewell-dab" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Farewell-dab" type="b2602c69:ProjectViewProjectNode" />
@@ -359,7 +389,7 @@
       <workItem from="1523854376387" duration="2443000" />
       <workItem from="1523864561654" duration="1279000" />
       <workItem from="1523865884133" duration="954000" />
-      <workItem from="1523867226044" duration="1904000" />
+      <workItem from="1523867226044" duration="2920000" />
     </task>
     <task id="LOCAL-00001" summary="Added feed_box template which will be later used for dynamic feed generation">
       <created>1523119928815</created>
@@ -669,11 +699,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523869298683</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added escape() on posts">
+      <created>1523880513897</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1523880513897</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72911000" />
+    <option name="totallyTimeSpent" value="73927000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -691,7 +728,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5002704" side_tool="true" weight="0.32963374" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" sideWeight="0.49972957" visible="true" weight="0.20574713" />
+      <window_info anchor="bottom" id="File Transfer" order="8" sideWeight="0.49972957" weight="0.20574713" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32963374" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -701,7 +738,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.3296027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39885056" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -722,7 +759,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Basic Profile Page implemented." />
     <MESSAGE value="A small typo" />
     <MESSAGE value="UI/UX bug fix" />
     <MESSAGE value="Errr Why do i have to write this everytime even for a very simple fix :(" />
@@ -747,7 +783,8 @@
     <MESSAGE value="FrontPage update" />
     <MESSAGE value="ACTION button UI fix" />
     <MESSAGE value="Admin Link changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Link changed" />
+    <MESSAGE value="added escape() on posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="added escape() on posts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/feed_box.html">
@@ -939,13 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1024,17 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/feed_box.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/front.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-584">
@@ -1056,13 +1075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/feed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="89" column="24" lean-forward="true" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/write.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1079,15 +1091,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state relative-caret-position="173">
+          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/feed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="89" column="24" lean-forward="true" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/controllers/write.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="640">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/feed_box.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="111" selection-start-line="25" selection-start-column="111" selection-end-line="25" selection-end-column="111" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
