@@ -34,11 +34,13 @@ function msgPost($post) {
     $msg = $post['msg'];
     $date_created = date("Y-m-d H:i:s");// 2001-03-10 17:16:18 (the MySQL DATETIME format)
     $likes = 0;
+    $msg = escape($msg);
     $query = "INSERT INTO `posts`(`p_id`, `from_id`, `to_id`, `msg`, `date_created`, `likes`) VALUES ('$p_id','$from_id','$to_id','$msg','$date_created','$likes')";
     if(mysqli_query($conn, $query)) {
         //post successful
         return true;
     } else {
+        die(mysqli_error($conn));
         return false;
     }
 }
