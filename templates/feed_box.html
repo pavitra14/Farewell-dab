@@ -2,15 +2,21 @@
     <div class="col-md-8 col-md-offset-2">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h3 class="box-title"><strong>[[FROM]]</strong> -> <strong>[[TO]]</strong></h3>
-                <div class="box-tools pull-right">
-                    <!-- Buttons, labels, and many other things can be placed here! -->
-                    <!-- Here is a label for example -->
-                    <span class="label label-[[ACTION_CSS]]" onclick="[[ACTION_CLICK]]">[[ACTION]]</span>
-                </div>
+                <h5 class="box-title"><strong>[[FROM]]</strong> -> <strong>[[TO]]</strong></h5>
+
             </div>
             <div class="box-body">
-                [[CONTENT]]
+                <div class="box" style="border: 0;">
+                    <div class="box-tools pull-right">
+                        <!-- Buttons, labels, and many other things can be placed here! -->
+                        <!-- Here is a label for example -->
+                        <span class="label label-[[ACTION_CSS]]" onclick="[[ACTION_CLICK]]">[[ACTION]]</span>
+                    </div>
+                    <div class="box-body">
+                        [[CONTENT]]
+                    </div>
+                </div>
+
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
