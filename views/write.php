@@ -107,6 +107,13 @@ $to_fname = $w_fname;
                         <li class="active"><a href="index.html">Feed <span class="sr-only">(current)</span></a></li>
                         <li><a href="?profile=1">My Profile</a></li>
                         <?=ifAdmin()?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Having any difficulty?<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>Feel free to reach us at :</li>
+                                <li><a href="mailto:me@pbehre.in?subject=FarewellDab%20Contact&body=">me@pbehre.in</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
