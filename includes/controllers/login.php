@@ -19,7 +19,7 @@ function login($user, $pass) {
             $_SESSION['authorized'] = true;
             $arr_details = mysqli_fetch_array($result);
             $_SESSION['arr_details'] = $arr_details;
-            if($arr_details['isAdmin'] == 0) {
+            if($arr_details['isAdmin'] == '1') {
                 $_SESSION['admin'] = true;
             } else {
                 $_SESSION['admin'] = false;
