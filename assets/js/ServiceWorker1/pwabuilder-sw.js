@@ -2,7 +2,7 @@
 
 //Install stage sets up the offline page in the cahche and opens a new cache
 self.addEventListener('install', function(event) {
-  var offlinePage = new Request('offline.html');
+  var offlinePage = new Request('https://farewell.pbehre.in/offline.html');
   event.waitUntil(
   fetch(offlinePage).then(function(response) {
     return caches.open('pwabuilder-offline').then(function(cache) {
