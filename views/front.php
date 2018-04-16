@@ -196,33 +196,6 @@ body {
 }
 
 /*
- * Subscribe modal box
- */
-#subscribeModal .modal-content {
-  background-color: #303546;
-  color: #fff;
-  text-align: left;
-}
-
-#subscribeModal .modal-header, #subscribeModal .modal-footer {
-  border: 0;
-}
-
-#subscribeModal .close {
-  color: #fff;
-}
-
-#subscribeModal .form-control {
-  margin-top: 1rem;
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-}
-
-#subscribeModal .form-control:focus {
-  border-color: #49506a;
-}
-
-/*
  * Affix and center
  */
 @media (min-width: 768px) {
@@ -232,7 +205,7 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -263,15 +236,13 @@ body {
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">FarewellDab </h3>
-
+<!--          <h3 class="masthead-brand">FarewellDab </h3>-->
         </div>
       </div>
-      <br>
       <div class="inner cover">
-        <h1 class="cover-heading">FarewellDab</h1>
+<!--        <h1 class="cover-heading">FarewellDab</h1>-->
+          <img src="assets/img/logo1.png" alt="FarewellDab" class="img-responsive" width="50%">
         <h5 class="sub-header"> Every goodbye always makes the next hello closer. </h5>
-        <br>
         <p class="lead cover-copy">
             Hop on!</p>
             <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" onclick="getStarted()">Get started! </button></p>

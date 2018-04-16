@@ -4,7 +4,7 @@
  * contains all the controllers and core functionality
  */
 
-ini_set("display_errors", "1"); // Should be disabled in production, disabled in remote server
+ini_set("display_errors", "0"); // Should be disabled in production, disabled in remote server
 ob_start();
 session_start();
 //load the config
