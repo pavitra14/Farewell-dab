@@ -66,7 +66,7 @@ function sendMail($to,$subject,$message,$headers) {
  * @param $username
  * @return bool
  */
-function mailNewAccount($to, $fname, $username) {
+function mailNewAccount($to, $fname, $username, $u_id) {
     global $noreply;
     global $templates;
     global $subjects;
@@ -76,6 +76,7 @@ function mailNewAccount($to, $fname, $username) {
     $message = str_replace("[[FIRST_NAME]]", $fname, $message); //replace the first parameter
     $write_link = SITE_URL.'?w=' . $username;
     $message = str_replace("[[WRITE_LINK]]", $write_link, $message); //replace the 2nd parameter
+    $message = str_replace("[[U_ID]]", $u_id, $message);
     return sendMail($to, $subject, $message, $headers);
 }
 

@@ -44,15 +44,22 @@ function countPosts($u_id) {
 function getURLFromName($mode = 'search', $query = null){
     global $conn;
     $full_name = '';
+    $u_id = '';
     if($query != null) {
         $full_name = trim($query);
+        $arr = explode("#", $full_name);
+        $full_name = $arr[0];
+        $u_id = $arr[1];
     } else {
         $full_name = trim($_GET['full_name']);
+        $arr = explode("#", $full_name);
+        $full_name = $arr[0];
+        $u_id = $arr[1];
     }
     $arr_name = explode(" ", $full_name);
     $fname = $arr_name[0];
     $lname = $arr_name[1];
-    $query = "SELECT * FROM user_details WHERE fname='$fname' AND lname='$lname'";
+    $query = "SELECT * FROM user_details WHERE fname='$fname' AND lname='$lname' AND u_id='$u_id'";
     $result=mysqli_query($conn, $query);
     $output = '';
     if(mysqli_num_rows($result) == 1) {
@@ -61,13 +68,12 @@ function getURLFromName($mode = 'search', $query = null){
         $output = "https://farewell.pbehre.in/?w=";
         $output .= $username;
     } else {
-        $output = "#";
+        $output = SITE_URL."#";
     }
     if($mode == 'search') {
-        header('Location: '. $output);
-    } else {
-        print $output;
+        header('Location: '.$output);
     }
+    print $output;
 }
 
 

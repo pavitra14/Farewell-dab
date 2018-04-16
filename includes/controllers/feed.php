@@ -145,7 +145,7 @@ function search(){
     $result = mysqli_query($conn, $query);
     $array = array();
     while($row=mysqli_fetch_array($result)){
-        $array[] = trim($row['fname']) . ' ' . trim($row['lname']);
+        $array[] = trim($row['fname']) . ' ' . trim($row['lname']) . '#'. trim($row['u_id']);
     }
     $output = json_encode($array);
     print $output;

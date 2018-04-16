@@ -168,6 +168,7 @@ $to_fname = $w_fname;
                                     <p>
                                         <?=$fullname?>
                                         <small>Session: <?=$arr_details['session']?></small>
+                                        <small>User id - #<?=$arr_details['u_id']?></small>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
