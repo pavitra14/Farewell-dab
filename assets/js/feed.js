@@ -2,7 +2,7 @@
         $.ajax({
             url: url,
             type: "GET",
-            data:  {rowcount:$("#rowcount").val()},
+            data:  {rowcount:$(".rowcount").val()},
             beforeSend: function(){
                 $('#loader-icon').show();
                 console.log("beforeSend()");
@@ -22,7 +22,7 @@
     $(window).scroll(function(){
         console.log("scroll")
         if ($(window).scrollTop() == $(document).height() - $(window).height()){
-            if($(".pagenum:last").val() <= $(".total-page").val()) {
+            if($(".pagenum:last").val() <= $(".rowcount").val()) {
                 var pagenum = parseInt($(".pagenum:last").val()) + 1;
                 getresult('includes/feedContent.html?page='+pagenum);
             }

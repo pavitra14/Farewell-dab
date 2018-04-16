@@ -37,8 +37,9 @@ function getFeed(){
         $_GET['rowcount'] = mysqli_num_rows($result);
     }
     $pages = ceil($_GET['rowcount']/$perPage);
+    $rowcount = $_GET['rowcount'];
     $output = '';
-    $output .= '<input type="hidden" class="pagenum" value="'.$page.'" /><input type="hidden" class="total-page" value="'.$pages.'"/>';
+    $output .= '<input type="hidden" class="pagenum" value="'.$page.'" /><input type="hidden" class="total-page" value="'.$pages.'"/><input type="hidden" class="rowcount" value="'.$rowcount.'"/>';
     if(mysqli_num_rows($result) != 0) {
         //$r = mysqli_fetch_array($result);
         $feedCont = getFeedTemplate();
