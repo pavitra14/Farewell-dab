@@ -87,6 +87,7 @@ $fname = $arr_details['fname'];
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Feed <span class="sr-only">(current)</span></a></li>
                         <li><a href="?profile=1">My Profile</a></li>
+                        <?=ifAdmin()?>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -154,11 +155,11 @@ $fname = $arr_details['fname'];
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="row">
-                                        <div class="col-sm-4 pull-left">
+                                        <div class="col-xs-4 pull-left">
                                             <a href="?profile=1" class="btn btn-default btn-flat">Profile</a>
                                         </div>
-                                        <?=ifAdmin()?>
-                                        <div class="col-sm-4 pull-right">
+
+                                        <div class="col-xs-4 pull-right">
                                             <a href="?logout" class="btn btn-default btn-flat">Sign out</a>
                                         </div>
                                     </div>
