@@ -19,15 +19,20 @@
     outline: medium none;
     padding: 8px 12px;
     width: 396px;
+    z-index: 999;
 }
 .typeahead {
     background-color: #FFFFFF;
 }
 .typeahead:focus {
     border: 2px solid #0097CF;
+    z-index: 999;
+
 }
 .tt-query {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    z-index: 999;
+
 }
 .tt-hint {
     color: #999999;
@@ -40,18 +45,24 @@
     margin-top: 12px;
     padding: 8px 0;
     /*width: 422px;*/
+    z-index: 2050;
 }
 .tt-suggestion {
     /*font-size: 24px;*/
     line-height: 24px;
     padding: 3px 20px;
+    z-index: 2050;
+
 }
 .tt-suggestion.tt-is-under-cursor {
     background-color: #0097CF;
     color: #FFFFFF;
+
 }
 .tt-suggestion p {
     margin: 0;
+    z-index: 999;
+
 }
 .pointer{
     cursor: pointer;
