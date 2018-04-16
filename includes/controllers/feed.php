@@ -26,7 +26,7 @@ function getFeed(){
     global $conn;
     $perPage = 10;
     $page = 1;
-    $sql = "SELECT * FROM posts";
+    $sql = "SELECT * FROM posts ORDER BY date_created desc";
     if(!empty($_GET['page'])) {
         $page = $_GET['page'];
     }
@@ -96,7 +96,7 @@ function like() {
  */
 function getUserFeed($u_id, $mode) {
     global $conn;
-    $query = "SELECT * FROM posts WHERE to_id='$u_id'";
+    $query = "SELECT * FROM posts WHERE to_id='$u_id' ORDER BY date_created desc";
     $result = mysqli_query($conn, $query);
     $output = '';
     if(mysqli_num_rows($result) != 0) {

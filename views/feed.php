@@ -205,7 +205,7 @@ $fname = $arr_details['fname'];
                         <div class="box-body">
                             This platform is still in beta stage and will be having bugs, please bear with us and report the bugs, we'll fix them ASAP.
                             <br>
-                            And please don't miss use the platform, we don't wanna ban you :(
+                            And please don't misuse the platform, we don't wanna ban you :(
                         </div>
                     </div>
                 </div>
