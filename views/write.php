@@ -105,7 +105,8 @@ $to_fname = $w_fname;
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="typeahead" id="navbar-search-input" placeholder="Search">
+                            <input type="text" class="form-control" name="full_name" id="navbar-search-input" placeholder="Search">
+                            <input type="submit" value="Search" style="display: none;" id="searchSubmit">
                         </div>
                     </form>
                     <ul class="nav navbar-nav">
@@ -120,7 +121,7 @@ $to_fname = $w_fname;
                             </ul>
                         </li>
                     </ul>
-                    
+
                 </div>
                 <!-- /.navbar-collapse -->
                 <!-- Navbar Right Menu -->

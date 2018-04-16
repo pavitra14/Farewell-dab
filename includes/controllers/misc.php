@@ -38,7 +38,10 @@ function countPosts($u_id) {
  * To get writeup url from full name
  * @return Write up Link
  */
-function getURLFromName(){
+/**
+ * @param string $mode
+ */
+function getURLFromName($mode = 'search'){
     global $conn;
     $full_name = trim($_GET['full_name']);
     $arr_name = explode(" ", $full_name);
@@ -55,7 +58,11 @@ function getURLFromName(){
     } else {
         $output = "#";
     }
-    print $output;
+    if($mode == 'search') {
+        header('Location: '. $output);
+    } else {
+        print $output;
+    }
 }
 
 /**

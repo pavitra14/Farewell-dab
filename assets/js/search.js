@@ -21,4 +21,5 @@ $(document).ready(function(){
         limit : 10
     });
     $('input#navbar-search-input').on('typeahead:selected', onSelect);
+    $('input#searchSubmit').on('click', onSelect);
 });

@@ -25,9 +25,6 @@ if($_POST['msgPost'] == 1) {
     }
 }
 
-
-
-
 //if-elseif statements to handle custom views.
 //these are to be at the last.
 if(!empty($_GET['profile'])){
