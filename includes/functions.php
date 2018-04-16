@@ -7,15 +7,8 @@
 ini_set("display_errors", "1"); // Should be disabled in production, disabled in remote server
 ob_start();
 session_start();
-//Some definations requried for the theme 
-define('LTE', 'modules/adminlte/');
-/**
- * Database details
- */
-$servername = "localhost";
-$username = "pbehrein_main";
-$password = "Pavitra14";
-$dbname = "pbehrein_farewell";
+//load the config
+require_once __DIR__.'/../config/config.php';
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection

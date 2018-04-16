@@ -74,7 +74,7 @@ function mailNewAccount($to, $fname, $username) {
     $message = construct_email($templates['new_account']);
     $subject = $subjects['new_account'];
     $message = str_replace("[[FIRST_NAME]]", $fname, $message); //replace the first parameter
-    $write_link = 'https://farewell.pbehre.in/?w=' . $username;
+    $write_link = SITE_URL.'?w=' . $username;
     $message = str_replace("[[WRITE_LINK]]", $write_link, $message); //replace the 2nd parameter
     return sendMail($to, $subject, $message, $headers);
 }
@@ -94,5 +94,6 @@ function mailNewPost($to,$from_name, $fname) {
     $subject = $subjects['new_post'];
     $message = str_replace("[[FIRST_NAME]]", $fname, $message); //1st parameter
     $message = str_replace("[[FROM_NAME]]", $from_name, $message); //2nd parameter
+    $message = str_replace("[[SITE_URL]]", SITE_URL, $message); //3rd parameter
     return sendMail($to, $subject, $message, $headers);
 }
