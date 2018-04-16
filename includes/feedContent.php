@@ -12,7 +12,7 @@ if(!empty($_GET['like'])) {
 }elseif(!empty($_GET['search_key'])) {
     search();
 }elseif(!empty($_GET['full_name'])){
-    getURLFromName();
+    getURLFromName('ajax');
 }elseif(!empty($_GET['delete'])){
     deletePost();
 } else {

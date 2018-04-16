@@ -41,9 +41,14 @@ function countPosts($u_id) {
 /**
  * @param string $mode
  */
-function getURLFromName($mode = 'search'){
+function getURLFromName($mode = 'search', $query = null){
     global $conn;
-    $full_name = trim($_GET['full_name']);
+    $full_name = '';
+    if($query != null) {
+        $full_name = trim($query);
+    } else {
+        $full_name = trim($_GET['full_name']);
+    }
     $arr_name = explode(" ", $full_name);
     $fname = $arr_name[0];
     $lname = $arr_name[1];
@@ -64,6 +69,7 @@ function getURLFromName($mode = 'search'){
         print $output;
     }
 }
+
 
 /**
  * To enforce ssl

@@ -24,6 +24,9 @@ if($_POST['msgPost'] == 1) {
         exit(json_encode($post));
     }
 }
+if(!empty($_GET['search'])) {
+    getURLFromName('search', $_GET['search']);
+}
 
 //if-elseif statements to handle custom views.
 //these are to be at the last.
