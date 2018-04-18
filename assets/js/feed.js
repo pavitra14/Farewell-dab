@@ -11,8 +11,11 @@
                 $('#loader-icon').hide();
             },
             success: function(data){
-                $("#feedContent").append(data);
-                console.log(data);
+                if(data == 'No new posts!') {
+                    $("#scroll-end").show();
+                } else {
+                    $("#feedContent").append(data);
+                }
             },
             error: function(error){
                 console.log(error);
@@ -21,10 +24,12 @@
     }
     $(window).scroll(function(){
         console.log("scroll")
-        if ($(window).scrollTop() == $(document).height() - $(window).height()){
-            if($(".pagenum:last").val() <= $(".rowcount").val()) {
+        if ($(window).scrollTop() + $(window).height() > $(document).height() - 100){
+            console.log('Almost end');
+            if($(".pagenum:last").val() <= $(".total-page").val()) {
                 var pagenum = parseInt($(".pagenum:last").val()) + 1;
                 getresult('includes/feedContent.html?page='+pagenum);
+                console.log($('.rowcount').val());
             }
         }
     });

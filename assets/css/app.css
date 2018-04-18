@@ -10,6 +10,9 @@
     position: fixed;
     display: none;
 }
+#scroll-end {
+    display: none;
+}
 .typeahead, .tt-query, .tt-hint {
     border: 2px solid #CCCCCC;
     border-radius: 8px;

@@ -36,7 +36,8 @@ function getFeed(){
     if(empty($_GET['rowcount'])) {
         $_GET['rowcount'] = mysqli_num_rows($result);
     }
-    $pages = ceil($_GET['rowcount']/$perPage);
+    $total_rows = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM posts")); //Very crucial bug fix.
+    $pages = ceil($total_rows/$perPage);
     $rowcount = $_GET['rowcount'];
     $output = '';
     $output .= '<input type="hidden" class="pagenum" value="'.$page.'" /><input type="hidden" class="total-page" value="'.$pages.'"/><input type="hidden" class="rowcount" value="'.$rowcount.'"/>';

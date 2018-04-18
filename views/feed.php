@@ -216,6 +216,11 @@ $fname = $arr_details['fname'];
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <div id="scroll-end">No new posts!</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
                         <div id="loader-icon"><i class="fa fa-spinner fa-spin"></i></div>
                     </div>
                 </div>
